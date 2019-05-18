@@ -1,4 +1,4 @@
-* linguist-vendored
+/* linguist-vendored
 *.bat linguist-vendored=false
 *.bat linguist-language=Java
 # In general, use LF for text
