@@ -16,6 +16,7 @@ rsGen默认至少需要提供用于反弹接收的IP和端口两个参数，如�
 ![rsgen_raw](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_raw.png "rsgen_raw.png")  
 
 -pub 参数，生成“中转命令”。
+
     PS:使用该参数，将执行命令上传，并将编码后的命令上传至公共pastebin网站(目前提供了两个接口:p.ip.fi和dpaste.com)。
 
 ![rsgen_pub](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_pub.png "rsgen_pub.png")
