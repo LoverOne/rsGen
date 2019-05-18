@@ -1,5 +1,5 @@
-special-vendored-path/* linguist-vendored
-jquery.js linguist-vendored=false
+command/* linguist-vendored
+rsgen.bat linguist-vendored=false
 # In general, use LF for text
 * text eol=lf
 
