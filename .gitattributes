@@ -1,5 +1,4 @@
 * linguist-vendored
-*.bat linguist-vendored=false
 *.bat linguist-language=rsGen
 # In general, use LF for text
 * text eol=lf

@@ -51,11 +51,11 @@ rsGen默认至少需要提供用于反弹接收的IP和端口两个参数，如�
 
 ## TODO
    
-   添加更多的反弹命令
+   *添加更多的反弹命令
 
-   代码优化&BUG修复
+   *代码优化&BUG修复
 
-   尝试添加类似ngrok公共服务器，用于无NAT映射、无VPS亦可轻松接收shell
+   *尝试添加类似ngrok公共服务器，用于无NAT映射、无VPS亦可轻松接收shell
 
 ## BUG反馈&改进建议 
 Flyfish#lcx.cc
