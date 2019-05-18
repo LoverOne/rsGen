@@ -1,4 +1,4 @@
-$ cat .gitattributes
+static/* linguist-vendored
 # In general, use LF for text
 * text eol=lf
 
