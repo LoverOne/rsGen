@@ -1,5 +1,6 @@
-command/* linguist-vendored
-rsgen.bat linguist-vendored=false
+* linguist-vendored
+*.bat linguist-vendored=false
+*.rb linguist-language=Java
 # In general, use LF for text
 * text eol=lf
 
