@@ -9,23 +9,26 @@
 ## Usage
 rsGen默认至少需要提供用于反弹接收的IP和端口两个参数，如若不提供任何参数，默认输出帮助信息。
 
-![rsgen](https://github.com/FlyfishSec/rsGen/blob/master/Usage/rsgen_default.png "rsgen_default")  
+![rsgen_default](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_default.png "rsgen_default")  
 
 仅生成原生格式反弹shell命令。
 
-![rsgen](http://rsgen_raw.png)  
+![rsgen_raw](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_raw.png "rsgen_raw.png")  
 
 -pub 参数，生成“中转命令”。
     PS:使用该参数，将执行命令上传，并将编码后的命令上传至公共pastebin网站(目前提供了两个接口:p.ip.fi和dpaste.com)。
+
+![rsgen_pub](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_pub.png "rsgen_pub.png")
     
 -lan 参数，用于有些情况下目标机器无法请求外网。
 
     PS:该参数会同时调用command目录下mongoose.exe(一个迷你的web服务器，仅144kb，详见官网：https://cesanta.com/),在本地80端口启用一个web服务，用于命令请求执行。工具使用完后，需要手动退出。
 
+![rsgen_lan](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_lan.png "rsgen_lan.png")
   -listen 参数，在本地启用端口监听，用于接收反弹回来的shell
 
     PS:在本地启用端口监听，用于接收反弹回来的shell，功能等同于netcat(调用powercat.ps1)。
-rsgen_listen.png
+![rsgen_listen](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsgen_listen.png "rsgen_listen.png")
 
 ## 环境需求
 
