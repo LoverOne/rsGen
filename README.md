@@ -9,7 +9,7 @@
 ## Usage
 rsGen默认至少需要提供用于反弹接收的IP和端口两个参数，如若不提供任何参数，默认输出帮助信息。
 
-![rsgen](http://rsgen_default.png)  
+![rsgen](https://github.com/FlyfishSec/rsGen/blob/master/Usage/rsgen_default.png "rsgen_default")  
 
 仅生成原生格式反弹shell命令。
 
