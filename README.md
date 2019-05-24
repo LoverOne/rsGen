@@ -9,15 +9,9 @@
 ## Usage
 By default, rsGen needs to provide at least two parameters for the IP and port of the reverse shell. If no parameters are provided, the default output help information.
 
-`-pub` &nbsp;&nbsp; Generate a "transfer command".
-
-    PS:Using this parameter, the command will be uploaded and the encoded command will be uploaded to the public pastebin website (currently two interfaces are provided: p.ip.fi and dpaste.com).  
-`-lan` &nbsp;&nbsp; In some cases, the target machine cannot request an external network.
-
-    PS:This parameter will call mongoose.exe in the command directory (a mini web server, only 144kb, see the website: https://cesanta.com/), enable a web service on the local port 80 for command request execution. After the tool is used, you need to manually exit it.
-`-listen` Enable port listening locally to receive shells that bounce back.
-
-    PS:Enable port listening locally to receive a shell that bounces back, functioning the same as netcat (calling powercat.ps1).
+`-pub` &nbsp;&nbsp; Generate a "transfer command".Using this parameter, the command will be uploaded and the encoded command will be uploaded to the public pastebin website (currently two interfaces are provided: p.ip.fi and dpaste.com).  
+`-lan` &nbsp;&nbsp; In some cases, the target machine cannot request an external network.This parameter will call mongoose.exe in the command directory (a mini web server, only 144kb, see the website: https://cesanta.com/), enable a web service on the local port 80 for command request execution. After the tool is used, you need to manually exit it.
+`-listen` Enable port listening locally to receive shells that bounce back.Enable port listening locally to receive a shell that bounces back, functioning the same as netcat (calling powercat.ps1).
 ![rsGen](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsGen.gif "rsGen.gif")
 
 ## Environmental needs
