@@ -21,7 +21,7 @@ By default, rsGen needs to provide at least two parameters for the IP and port o
       After the tool is used, you need to manually exit it.
 
 -listen  Enable port listening locally to receive shells that bounce back.Enable port listening locally 
-         to receive a shell that bounces back, functioning the same as netcat (calling powercat.ps1).
+         to receive a shell that bounces back, functioning the same as netcat (call powercat.ps1).
 
 ```
 ![rsGen](https://raw.githubusercontent.com/FlyfishSec/rsGen/master/Usage/rsGen_Usage.gif "rsGen.gif")
