@@ -1,6 +1,6 @@
 @if (@rsgen) == (@RSGEN) @end /***** JS
 @echo off
-title rsGEN - Universal Reverse Shell Command Genrator by Flyfish
+title rsGen - Universal Reverse Shell Command Genrator by Flyfish
 
 ::main
 :rs_main_start
