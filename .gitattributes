@@ -1,7 +1,7 @@
 * linguist-vendored
-*.bat linguist-language=rsGen
+*.bat linguist-language=Flyfish
 # In general, use LF for text
-* text eol=lf
+* text eol=crlf
 
 # Windows CMD does not like LF in batch files
 *.bat text eol=crlf
