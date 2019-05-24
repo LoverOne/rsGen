@@ -547,7 +547,7 @@ echo  An Universal Reverse Shell Command Genrator.(Notice: You need to provide a
 echo,
 echo Usage: %~nx0 host port [options]
 echo Options:
-echo   -pub       Upload to pastebin to generate relay command.
+echo   -pub       Upload to pastebin to generate "transfer command".
 echo   -lan       Generate command for LAN only and enable a web service locally
 echo   -listen    Generate command and listen the shell port.
 echo,
