@@ -4,6 +4,8 @@
 
   rsGen is an universal reverse shell command genrator based on Windows Batch and Jscript hybrids. Not only support the generation of raw Reverse shell commands, but also support the generation of a "Transfer command".
   
+  chinese help: https://www.freebuf.com/sectool/203304.html
+  
 >"Transfer command": Just like RAT look for connection IP, upload the command to the pastebin website, then use the tool curl/wget/certutil... to remote Request Execution Command.
 
 ## Usage
