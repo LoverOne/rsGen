@@ -1,1 +1,1 @@
-cmd /k cd C:\Users\xsbbl\Desktop\rsgen
+cmd /k cd %~dp0
