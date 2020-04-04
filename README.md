@@ -55,4 +55,4 @@ By default, rsGen needs to provide at least two parameters for the IP and port o
    * Try adding a similar ngrok public server for NAT-free mapping, no VPS, and easy to receive shells.
 
 ## BUG Feedback & Advice
-Flyfish#lcx.cc
+i@Flyfishsec.uu.me
